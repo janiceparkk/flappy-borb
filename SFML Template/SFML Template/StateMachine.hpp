@@ -9,8 +9,8 @@ namespace Sonar {
 
     class StateMachine {
         public:
-            StateMachine();
-            ~StateMachine(); // destructor
+            StateMachine() {}
+            ~StateMachine() {} // destructor
             
             void AddState(StateRef newState, bool isReplacing = true);
             void RemoveState();
