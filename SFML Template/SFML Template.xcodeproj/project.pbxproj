@@ -16,6 +16,7 @@
 		C087E59E2C5C08F60047FD9E /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E59C2C5C08F60047FD9E /* StateMachine.cpp */; };
 		C087E5A12C5C12090047FD9E /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E59F2C5C12090047FD9E /* AssetManager.cpp */; };
 		C087E5A42C5C1E480047FD9E /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E5A22C5C1E480047FD9E /* InputManager.cpp */; };
+		C087E5A72C5C285B0047FD9E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E5A52C5C285B0047FD9E /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,8 @@
 		C087E5A02C5C12090047FD9E /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
 		C087E5A22C5C1E480047FD9E /* InputManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
 		C087E5A32C5C1E480047FD9E /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
+		C087E5A52C5C285B0047FD9E /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		C087E5A62C5C285B0047FD9E /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				C087E5A02C5C12090047FD9E /* AssetManager.hpp */,
 				C087E5A22C5C1E480047FD9E /* InputManager.cpp */,
 				C087E5A32C5C1E480047FD9E /* InputManager.hpp */,
+				C087E5A52C5C285B0047FD9E /* Game.cpp */,
+				C087E5A62C5C285B0047FD9E /* Game.hpp */,
 			);
 			path = "SFML Template";
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				C087E5A12C5C12090047FD9E /* AssetManager.cpp in Sources */,
 				C051AE5B2C5406520067C253 /* main.cpp in Sources */,
 				C087E59E2C5C08F60047FD9E /* StateMachine.cpp in Sources */,
+				C087E5A72C5C285B0047FD9E /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
