@@ -14,6 +14,7 @@
 		C051AE6A2C54083D0067C253 /* libsfml-system.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C051AE652C54083D0067C253 /* libsfml-system.2.6.1.dylib */; };
 		C051AE6B2C54083D0067C253 /* libsfml-window.2.6.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C051AE662C54083D0067C253 /* libsfml-window.2.6.1.dylib */; };
 		C087E59E2C5C08F60047FD9E /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E59C2C5C08F60047FD9E /* StateMachine.cpp */; };
+		C087E5A12C5C12090047FD9E /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C087E59F2C5C12090047FD9E /* AssetManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		C087E59B2C5C06F60047FD9E /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
 		C087E59C2C5C08F60047FD9E /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
 		C087E59D2C5C08F60047FD9E /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
+		C087E59F2C5C12090047FD9E /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
+		C087E5A02C5C12090047FD9E /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				C087E59B2C5C06F60047FD9E /* State.hpp */,
 				C087E59C2C5C08F60047FD9E /* StateMachine.cpp */,
 				C087E59D2C5C08F60047FD9E /* StateMachine.hpp */,
+				C087E59F2C5C12090047FD9E /* AssetManager.cpp */,
+				C087E5A02C5C12090047FD9E /* AssetManager.hpp */,
 			);
 			path = "SFML Template";
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C087E5A12C5C12090047FD9E /* AssetManager.cpp in Sources */,
 				C051AE5B2C5406520067C253 /* main.cpp in Sources */,
 				C087E59E2C5C08F60047FD9E /* StateMachine.cpp in Sources */,
 			);
