@@ -12,3 +12,6 @@
 
 #define GAME_TITLE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/title.png"
 #define PLAY_BUTTON_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PlayButton.png"
+
+#define PIPE_UP_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeUp.png"
+#define PIPE_DOWN_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeDown.png"

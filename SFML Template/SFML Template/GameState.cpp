@@ -9,6 +9,11 @@ namespace Sonar {
 
     void GameState::Init() {
         _data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
+        _data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
+        _data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
+        
+        pipe = new Pipe(_data);
+        
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
     }
 
@@ -28,6 +33,7 @@ namespace Sonar {
     void GameState::Draw(float dt) {
         _data->window.clear();
         _data->window.draw(_background);
+        pipe->DrawPipes();
         _data->window.display();
     }
 }
