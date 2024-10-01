@@ -12,7 +12,7 @@ namespace Sonar {
         _data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
         _data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
         
-        pipe = new Pipe(_data);
+        pipe = std::make_unique<Pipe>(_data);
         
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
     }

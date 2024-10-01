@@ -18,6 +18,6 @@ namespace Sonar {
         private:
             GameDataRef _data;
             sf::Sprite _background;
-            Pipe *pipe;
+            std::unique_ptr<Pipe> pipe;
     };
 }
