@@ -24,10 +24,18 @@ namespace Sonar {
             if (sf::Event::Closed == event.type) {
                 _data->window.close();
             }
+            
+            // Temp: Testing if Pipes Spawn
+            if (_data->input.IsSpriteClicked(_background, sf::Mouse::Left, _data->window)) {
+                pipe->SpawnInvisiblePipe();
+                pipe->SpawnBottomPipe();
+                pipe->SpawnTopPipe();
+            }
         }
     }
 
     void GameState::Update(float dt) {
+        pipe->MovePipes(dt);
     }
 
     void GameState::Draw(float dt) {

@@ -15,3 +15,5 @@
 
 #define PIPE_UP_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeUp.png"
 #define PIPE_DOWN_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeDown.png"
+
+#define PIPE_MOVEMENT_SPEED 200.0f
