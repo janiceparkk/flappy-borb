@@ -19,5 +19,6 @@ namespace Sonar {
             GameDataRef _data;
             sf::Sprite _background;
             std::unique_ptr<Pipe> pipe;
+            sf::Clock clock;
     };
 }

@@ -24,10 +24,14 @@ namespace Sonar {
 
     void Pipe::MovePipes(float dt) {
         for (unsigned short int i = 0; i < pipeSprites.size(); i++) {
-            sf::Vector2 position = pipeSprites.at(i).getPosition();
-            float movement = PIPE_MOVEMENT_SPEED * dt;
-            
-            pipeSprites.at(i).move(-movement, 0);
+            // pipe is out of bounds
+            // disappear off the edge (so it has to be negative value)
+            if (pipeSprites.at(i).getPosition().x < 0 - pipeSprites.at(i).getGlobalBounds().width) {
+                pipeSprites.erase(pipeSprites.begin() + i);
+            } else {
+                float movement = PIPE_MOVEMENT_SPEED * dt;
+                pipeSprites.at(i).move(-movement, 0);
+            }
         }
     }
 
