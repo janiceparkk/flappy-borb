@@ -16,5 +16,7 @@
 #define PIPE_UP_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeUp.png"
 #define PIPE_DOWN_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeDown.png"
 
+#define LAND_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Land.png"
+
 #define PIPE_MOVEMENT_SPEED 200.0f
-#define PIPE_SPAWN_FREQUENCY 0.5f
+#define PIPE_SPAWN_FREQUENCY 2.0f
