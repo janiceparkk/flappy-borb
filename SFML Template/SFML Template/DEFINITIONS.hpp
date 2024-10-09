@@ -18,5 +18,10 @@
 
 #define LAND_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Land.png"
 
+#define BIRD_FRAME_1_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/bird-01.png"
+#define BIRD_FRAME_2_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/bird-02.png"
+#define BIRD_FRAME_3_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/bird-03.png"
+#define BIRD_FRAME_4_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/bird-04.png"
+
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.0f

@@ -5,6 +5,7 @@
 #include "Game.hpp"
 #include "Pipe.hpp"
 #include "Land.hpp"
+#include "Bird.hpp"
 
 namespace Sonar {
     class GameState : public State {
@@ -21,6 +22,7 @@ namespace Sonar {
             sf::Sprite _background;
             std::unique_ptr<Pipe> pipe;
             std::unique_ptr<Land> land;
+            std::unique_ptr<Bird> bird;
             sf::Clock clock;
     };
 }

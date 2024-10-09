@@ -12,9 +12,11 @@ namespace Sonar {
         _data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
         _data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
         _data->assets.LoadTexture("Land", LAND_FILEPATH);
+        _data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
         
         pipe = std::make_unique<Pipe>(_data);
         land = std::make_unique<Land>(_data);
+        bird = std::make_unique<Bird>(_data);
         
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
     }
@@ -53,6 +55,7 @@ namespace Sonar {
         _data->window.draw(_background);
         pipe->DrawPipes();
         land->DrawLand();
+        bird->Draw();
         _data->window.display();
     }
 }
