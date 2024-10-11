@@ -32,9 +32,8 @@ namespace Sonar {
                 _data->window.close();
             }
             
-            // Temp: Testing if Pipes Spawn
             if (_data->input.IsSpriteClicked(_background, sf::Mouse::Left, _data->window)) {
-                
+                bird->Tap();
             }
         }
     }
@@ -53,6 +52,7 @@ namespace Sonar {
         }
         
         bird->Animate(dt);
+        bird->Update(dt);
     }
 
     void GameState::Draw(float dt) {
