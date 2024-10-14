@@ -21,5 +21,6 @@ namespace Sonar {
             sf::Clock _clock;
             sf::Clock _movementClock;
             int _birdState;
+            float _rotation;
     };
 }

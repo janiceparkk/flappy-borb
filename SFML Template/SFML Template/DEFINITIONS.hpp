@@ -36,3 +36,6 @@
 #define FLYING_SPEED 350.0f
 
 #define FLYING_DURATION 0.25f
+
+#define ROTATION_SPEED 100.0f
+#define MAX_ROTATION 25.0f
