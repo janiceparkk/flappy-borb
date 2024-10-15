@@ -13,6 +13,7 @@ namespace Sonar {
             void Animate(float dt);
             void Update(float dt);
             void Tap();
+            const sf::Sprite &GetSprite() const;
         private:
             GameDataRef _data;
             sf::Sprite _birdSprite;

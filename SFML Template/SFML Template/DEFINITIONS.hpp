@@ -39,3 +39,9 @@
 
 #define ROTATION_SPEED 100.0f
 #define MAX_ROTATION 25.0f
+
+enum GameStates {
+    eReady,
+    ePlaying,
+    eGameOver
+};
