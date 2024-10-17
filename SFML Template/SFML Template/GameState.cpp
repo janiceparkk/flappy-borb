@@ -20,6 +20,7 @@ namespace Sonar {
         pipe = std::make_unique<Pipe>(_data);
         land = std::make_unique<Land>(_data);
         bird = std::make_unique<Bird>(_data);
+        flash = std::make_unique<Flash>(_data);
         
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
         _gameState = GameStates::eReady;
@@ -74,6 +75,10 @@ namespace Sonar {
                 }
             }
         }
+        
+        if (GameStates::eGameOver == _gameState) {
+			flash->Show(dt);
+		}
     }
 
     void GameState::Draw(float dt) {
@@ -82,6 +87,7 @@ namespace Sonar {
         pipe->DrawPipes();
         land->DrawLand();
         bird->Draw();
+        flash->Draw();
         _data->window.display();
     }
 }
