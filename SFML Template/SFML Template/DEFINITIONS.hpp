@@ -15,6 +15,7 @@
 
 #define PIPE_UP_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeUp.png"
 #define PIPE_DOWN_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/PipeDown.png"
+#define SCORING_PIPE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/InvisibleScoringPipe.png"
 
 #define LAND_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Land.png"
 

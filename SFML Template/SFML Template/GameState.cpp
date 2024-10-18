@@ -11,6 +11,7 @@ namespace Sonar {
         _data->assets.LoadTexture("Game Background", GAME_BACKGROUND_FILEPATH);
         _data->assets.LoadTexture("Pipe Up", PIPE_UP_FILEPATH);
         _data->assets.LoadTexture("Pipe Down", PIPE_DOWN_FILEPATH);
+        _data->assets.LoadTexture("Scoring Pipe", SCORING_PIPE_FILEPATH);
         _data->assets.LoadTexture("Land", LAND_FILEPATH);
         _data->assets.LoadTexture("Bird Frame 1", BIRD_FRAME_1_FILEPATH);
         _data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
@@ -24,6 +25,7 @@ namespace Sonar {
         
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
         _gameState = GameStates::eReady;
+        _score = 0;
     }
 
     void GameState::HandleInput() {
@@ -56,6 +58,7 @@ namespace Sonar {
                 pipe->SpawnInvisiblePipe();
                 pipe->SpawnBottomPipe();
                 pipe->SpawnTopPipe();
+                pipe->SpawnScoringPipe();
                 
                 clock.restart();
             }
@@ -74,6 +77,17 @@ namespace Sonar {
                     _gameState = GameStates::eGameOver;
                 }
             }
+            
+            if (GameStates::ePlaying == _gameState) {
+				std::vector<sf::Sprite> &scoringSprites = pipe->GetScoringSprites();
+				for (int i = 0; i < scoringSprites.size(); i++) {
+					if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f)) {
+						_score++;
+						scoringSprites.erase(scoringSprites.begin() + i);
+					}
+				}
+			}
+            
         }
         
         if (GameStates::eGameOver == _gameState) {

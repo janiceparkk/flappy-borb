@@ -29,5 +29,6 @@ namespace Sonar {
             Collision collision;
             sf::Clock clock;
             int _gameState;
+            int _score;
     };
 }
