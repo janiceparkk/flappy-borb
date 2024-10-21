@@ -17,15 +17,18 @@ namespace Sonar {
         _data->assets.LoadTexture("Bird Frame 2", BIRD_FRAME_2_FILEPATH);
         _data->assets.LoadTexture("Bird Frame 3", BIRD_FRAME_3_FILEPATH);
         _data->assets.LoadTexture("Bird Frame 4", BIRD_FRAME_4_FILEPATH);
+        _data->assets.LoadFont("Flappy Font", FLAPPY_FONT_FILEPATH);
         
         pipe = std::make_unique<Pipe>(_data);
         land = std::make_unique<Land>(_data);
         bird = std::make_unique<Bird>(_data);
         flash = std::make_unique<Flash>(_data);
+        hud = std::make_unique<HUD>(_data);
         
         _background.setTexture(this->_data->assets.GetTexture("Game Background"));
-        _gameState = GameStates::eReady;
         _score = 0;
+        hud->UpdateScore(_score);
+         _gameState = GameStates::eReady;
     }
 
     void GameState::HandleInput() {
@@ -83,6 +86,7 @@ namespace Sonar {
 				for (int i = 0; i < scoringSprites.size(); i++) {
 					if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, scoringSprites.at(i), 1.0f)) {
 						_score++;
+						hud->UpdateScore(_score);
 						scoringSprites.erase(scoringSprites.begin() + i);
 					}
 				}
@@ -102,6 +106,7 @@ namespace Sonar {
         land->DrawLand();
         bird->Draw();
         flash->Draw();
+        hud->Draw();
         _data->window.display();
     }
 }

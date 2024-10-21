@@ -8,6 +8,7 @@
 #include "Bird.hpp"
 #include "Collision.hpp"
 #include "Flash.hpp"
+#include "HUD.hpp"
 
 namespace Sonar {
     class GameState : public State {
@@ -26,6 +27,7 @@ namespace Sonar {
             std::unique_ptr<Land> land;
             std::unique_ptr<Bird> bird;
             std::unique_ptr<Flash> flash;
+            std::unique_ptr<HUD> hud;
             Collision collision;
             sf::Clock clock;
             int _gameState;
