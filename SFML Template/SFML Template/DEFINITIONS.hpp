@@ -25,6 +25,8 @@
 #define BIRD_FRAME_4_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/bird-04.png"
 
 #define FLAPPY_FONT_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/fonts/FlappyFont.ttf"
+#define GAME_OVER_TITLE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Game-Over-Title.png"
+#define GAME_OVER_BODY_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Game-Over-Body.png"
 
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.0f
@@ -50,3 +52,4 @@ enum GameStates {
 };
 
 #define FLASH_SPEED 1500.0f
+#define TIME_BEFORE_GAME_OVER_APPEARS 1.5f

@@ -3,6 +3,7 @@
 
 #include "GameState.hpp"
 #include "DEFINITIONS.hpp"
+#include "GameOverState.hpp"
 
 namespace Sonar {
     GameState::GameState(GameDataRef data) : _data(data) {}
@@ -71,6 +72,7 @@ namespace Sonar {
             for (int i = 0; i < landSprites.size(); i++) {
                 if (collision.CheckSpriteCollision(bird->GetSprite(), 0.7f, landSprites.at(i), 1.0f)) {
                     _gameState = GameStates::eGameOver;
+                    clock.restart();
                 }
             }
             
@@ -78,6 +80,7 @@ namespace Sonar {
             for (int i = 0; i < pipeSprites.size(); i++) {
                 if (collision.CheckSpriteCollision(bird->GetSprite(), 0.625f, pipeSprites.at(i), 1.0f)) {
                     _gameState = GameStates::eGameOver;
+                    clock.restart();
                 }
             }
             
@@ -96,6 +99,9 @@ namespace Sonar {
         
         if (GameStates::eGameOver == _gameState) {
 			flash->Show(dt);
+			if (clock.getElapsedTime().asSeconds() > TIME_BEFORE_GAME_OVER_APPEARS) {
+				_data->machine.AddState(StateRef(new GameOverState(_data)), true);
+			}
 		}
     }
 
