@@ -6,7 +6,7 @@
 #include "GameState.hpp"
 
 namespace Sonar {
-    GameOverState::GameOverState(GameDataRef data) : _data(data) {}
+    GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score) {}
 
     void GameOverState::Init() {
         _data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
@@ -21,6 +21,20 @@ namespace Sonar {
         _gameOverContainer.setPosition((_data->window.getSize().x / 2) - (_gameOverContainer.getGlobalBounds().width / 2), (_data->window.getSize().y / 2) - (_gameOverContainer.getGlobalBounds().height / 2));
         _gameOverTitle.setPosition((_data->window.getSize().x / 2) - (_gameOverTitle.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y - (_gameOverTitle.getGlobalBounds().height * 1.2));
         _retryButton.setPosition((_data->window.getSize().x / 2) - (_retryButton.getGlobalBounds().width / 2), _gameOverContainer.getPosition().y + _gameOverContainer.getGlobalBounds().height + (_retryButton.getGlobalBounds().height * 0.2));
+        
+        _scoreText.setFont(_data->assets.GetFont("Flappy Font"));
+        _scoreText.setString(std::to_string(_score));
+        _scoreText.setCharacterSize(56);
+        _scoreText.setFillColor(sf::Color::White);
+        _scoreText.setOrigin(_scoreText.getGlobalBounds().width / 2, _scoreText.getGlobalBounds().height / 2);
+        _scoreText.setPosition(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 2.15);
+        
+        _highScoreText.setFont(_data->assets.GetFont("Flappy Font"));
+        _highScoreText.setString(std::to_string(_hightScore));
+        _highScoreText.setCharacterSize(56);
+        _highScoreText.setFillColor(sf::Color::White);
+        _highScoreText.setOrigin(_highScoreText.getGlobalBounds().width / 2, _highScoreText.getGlobalBounds().height / 2);
+        _highScoreText.setPosition(_data->window.getSize().x / 10 * 7.25, _data->window.getSize().y / 1.78);
     }
 
     void GameOverState::HandleInput() {
@@ -45,6 +59,8 @@ namespace Sonar {
         _data->window.draw(_gameOverTitle);
         _data->window.draw(_gameOverContainer);
         _data->window.draw(_retryButton);
+        _data->window.draw(_scoreText);
+        _data->window.draw(_highScoreText);
         _data->window.display();
     }
 }
