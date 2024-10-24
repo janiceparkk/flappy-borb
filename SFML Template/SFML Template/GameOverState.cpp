@@ -1,4 +1,5 @@
 #include <sstream>
+#include <fstream>
 #include <iostream>
 
 #include "GameOverState.hpp"
@@ -9,6 +10,25 @@ namespace Sonar {
     GameOverState::GameOverState(GameDataRef data, int score) : _data(data), _score(score) {}
 
     void GameOverState::Init() {
+		std::ifstream readFile;
+		readFile.open(HIGHSCORE_FILEPATH);
+		
+		if (readFile.is_open()) {
+			while (!readFile.eof()) {
+				readFile >> _hightScore;
+			}
+		}
+		readFile.close();
+		
+		std::ofstream writeFile(HIGHSCORE_FILEPATH);
+		if (writeFile.is_open()) {
+			if (_score > _hightScore) {
+				_hightScore = _score;
+			}
+			writeFile << _hightScore;
+		}
+		writeFile.close();
+		
         _data->assets.LoadTexture("Game Over Background", GAME_OVER_BACKGROUND_FILEPATH);
         _data->assets.LoadTexture("Game Over Title", GAME_OVER_TITLE_FILEPATH);
         _data->assets.LoadTexture("Game Over Body", GAME_OVER_BODY_FILEPATH);

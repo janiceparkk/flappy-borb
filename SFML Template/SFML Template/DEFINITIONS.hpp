@@ -27,6 +27,7 @@
 #define FLAPPY_FONT_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/fonts/FlappyFont.ttf"
 #define GAME_OVER_TITLE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Game-Over-Title.png"
 #define GAME_OVER_BODY_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Game-Over-Body.png"
+#define HIGHSCORE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/Highscore.txt"
 
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.0f
