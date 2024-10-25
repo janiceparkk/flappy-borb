@@ -29,6 +29,11 @@
 #define GAME_OVER_BODY_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Game-Over-Body.png"
 #define HIGHSCORE_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/Highscore.txt"
 
+#define BRONZE_MEDAL_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Bronze-Medal.png"
+#define SILVER_MEDAL_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Silver-Medal.png"
+#define GOLD_MEDAL_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Gold-Medal.png"
+#define PLATINUM_MEDAL_FILEPATH "/Users/jpark/c++/SFML/SFML Template/SFML Template/Resources/res/Platinum-Medal.png"
+
 #define PIPE_MOVEMENT_SPEED 200.0f
 #define PIPE_SPAWN_FREQUENCY 1.0f
 
@@ -54,3 +59,8 @@ enum GameStates {
 
 #define FLASH_SPEED 1500.0f
 #define TIME_BEFORE_GAME_OVER_APPEARS 1.5f
+
+#define BRONZE_MEDAL_SCORE 0
+#define SILVER_MEDAL_SCORE 5
+#define GOLD_MEDAL_SCORE 25
+#define PLATINUM_MEDAL_SCORE 100
